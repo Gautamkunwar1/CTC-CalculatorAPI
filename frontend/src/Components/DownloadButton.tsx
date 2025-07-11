@@ -22,7 +22,7 @@ const DownloadButton = () => {
             { head: "Gross Salary", value: Math.round(ctc) }
         ],
         Deduction: [
-            { head: "EPF", value: typeof EPF === "number" ? EPF : (isNaN(EPF)) ? 0 : EPF },
+            { head: "EPF", value: typeof EPF === "number" ? Math.round(EPF) : (isNaN(EPF)) ? 0 : Math.round(EPF) },
             { head: "Professional Tax", value: typeof PFTax === "number" ? PFTax : (isNaN(PFTax?.label) ? 0 : PFTax.label) },
             { head: "ESI", value: typeof ESIEmployee === "number" ? Math.round(ESIEmployee) : (isNaN(ESIEmployee?.label) ? 0 : Math.round(ESIEmployee.label)) },
             { head: "Income Tax", value: IncomeTax?.totalIncomeTax ?? 0 },
